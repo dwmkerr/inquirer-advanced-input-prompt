@@ -94,12 +94,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Release Please
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: "@dwmkerr/advanced-input-prompt"
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -130,4 +129,3 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
-
