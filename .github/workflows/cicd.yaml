@@ -55,6 +55,9 @@ jobs:
             echo "index.js is installed successfully."
           else
             echo "index.js is missing!"
+            ls -al ./node_modules
+            ls -al ./node_modules/@dwmkerr
+            ls -al ./node_modules/@dwmkerr/inq*
             exit 1
           fi
 
