@@ -1,18 +1,42 @@
 {
-  "name": "inquirer-interactive-list-prompt",
-  "version": "1.0.4",
-  "description": "Interactive list prompt implementation for Inquirer.js",
-  "main": "index.mjs",
+  "name": "inquirer-advanced-input-prompt",
+  "version": "0.1.0",
+  "description": "An Inquirer.js input prompt that offers 'hints' displayed below the input field, useful for providing instructions to users.",
+  "author": "dwmkerr",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "demo": "ts-node src/demo.ts",
+    "lint": "eslint ."
+  },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pgibler/inquirer-interactive-list-prompt.git"
+    "url": "https://github.com/dwmkerr/inquirer-advanced-input-prompt"
   },
-  "author": "Paul Gibler <paul.gibler@gmail.com>",
-  "license": "MIT",
+  "keywords": [
+    "inquirer",
+    "prompt",
+    "custom",
+    "cli"
+  ],
+  "peerDependencies": {
+    "inquirer": ">=8.0.0"
+  },
   "dependencies": {
-    "@inquirer/core": "^1.0.1",
-    "chalk": "^4.1.0",
-    "inquirer": "^9.2.0",
-    "readline": "^1.3.0"
-  }
+    "@inquirer/core": "^10.1.8",
+    "@inquirer/type": "^3.0.5",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT"
 }

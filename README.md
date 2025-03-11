@@ -1,6 +1,8 @@
-# Inquirer Interactive List Prompt
+# inquirer-advanced-input-prompt
 
-An interactive list prompt implementation for [Inquirer](https://github.com/SBoudrias/Inquirer.js/).
+An input prompt implementation for [Inquirer](https://github.com/SBoudrias/Inquirer.js/) that provides some advanced features.
+
+Out of the box, this prompt works just like the [`input`](https://github.com/SBoudrias/Inquirer.js/?tab=readme-ov-file#input) prompt.
 
 You can select a choice by using the arrow keys + Enter or by pressing the key associated with the choice.
 ```javascript
