@@ -1,5 +1,5 @@
 {
-  "name": "inquirer-advanced-input-prompt",
+  "name": "@dwmkerr/inquirer-advanced-input-prompt",
   "version": "0.1.0",
   "description": "An Inquirer.js input prompt that offers 'hints' displayed below the input field, useful for providing instructions to users.",
   "author": "dwmkerr",
@@ -7,12 +7,20 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "demo": "ts-node src/demo.ts",
-    "lint": "eslint ."
+    "build:watch": "tsc -w",
+    "start": "ts-node src/demo.ts",
+    "start:debug": "node --inspect-brk node_modules/.bin/ts-node ./src/demo.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "jest --no-coverage",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --no-coverage",
+    "test:watch": "jest --watch --no-coverage",
+    "test:cov": "jest --coverage",
+    "tsc": "tsc",
+    "prepare": "husky"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -30,11 +38,21 @@
   "dependencies": {
     "@inquirer/core": "^10.1.8",
     "@inquirer/type": "^3.0.5",
-    "chalk": "^5.4.1"
+    "chalk": "^4.1.2"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
+    "@types/jest": "^29.5.14",
+    "@types/mock-fs": "^4.13.4",
     "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "mock-fs": "^5.2.0",
+    "ts-jest": "^29.2.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   },
