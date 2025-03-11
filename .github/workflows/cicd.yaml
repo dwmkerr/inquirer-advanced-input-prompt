@@ -42,9 +42,12 @@ jobs:
 
       - name: Validate Install
         run: |
-          npm install .
           mkdir temp-test && cd temp-test
-          echo "Checking installed version..."
+          # Do an install from a child folder, basically faking what a consumer
+          # would do. We're just installing from the local files rather than
+          # NPM, to validate we get the expected essential file.
+          npm install ..
+          echo "Checking installation contains index.js..."
           stat ./dist/index.js || (echo "index.js appears to be missing" && exit 1)
 
       - name: Upload Build Artifacts
