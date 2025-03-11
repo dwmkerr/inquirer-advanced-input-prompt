@@ -42,13 +42,24 @@ jobs:
 
       - name: Validate Install
         run: |
-          mkdir temp-test && cd temp-test
-          # Do an install from a child folder, basically faking what a consumer
-          # would do. We're just installing from the local files rather than
-          # NPM, to validate we get the expected essential file.
+          # Create a test install folder.
+          mkdir test-install
+          cd test-install || exit
+
+          # Install the library.
           npm install ..
-          echo "Checking installation contains index.js..."
-          stat ./dist/index.js || (echo "index.js appears to be missing" && exit 1)
+
+          # Validate we have the index.
+          if [ -f "../node_modules/<your-package-name>/dist/index.js" ]; then
+            echo "index.js is installed successfully."
+          else
+            echo "index.js is missing!"
+            exit 1
+          fi
+
+          # Clean up.
+          cd ..
+          rm -rf test-install
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
