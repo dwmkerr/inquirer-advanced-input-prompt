@@ -45,7 +45,7 @@ jobs:
           npm install .
           mkdir temp-test && cd temp-test
           echo "Checking installed version..."
-          stat ./lib/index.js || (echo "index.js appears to be missing" && exit 1)
+          stat ./dist/index.js || (echo "index.js appears to be missing" && exit 1)
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4

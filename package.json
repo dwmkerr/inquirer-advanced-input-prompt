@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "An Inquirer.js input prompt that offers 'hints' displayed below the input field, useful for providing instructions to users.",
   "author": "dwmkerr",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
