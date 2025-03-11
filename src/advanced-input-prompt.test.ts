@@ -1,8 +1,7 @@
-// __tests__/advanced-input-prompt.test.ts
 import advancedInputPrompt, {
   AdvancedInputConfig,
 } from "../src/advanced-input-prompt";
-import { useKeypress } from "@inquirer/core";
+import * as inquirerCore from "@inquirer/core";
 
 // Create a fake readline interface that your prompt expects.
 const fakeRl = {
@@ -19,7 +18,8 @@ describe("advancedInputPrompt", () => {
   it("returns the typed input when Enter is pressed", async () => {
     // Spy on useKeypress and simulate typing then pressing Enter.
     const keypressSpy = jest
-      .spyOn(require("@inquirer/core"), "useKeypress")
+      .spyOn(inquirerCore, "useKeypress")
+      // eslint-disable-next-line  @typescript-eslint/no-explicit-any
       .mockImplementation((cb: any) => {
         // First, simulate a key event that isn't enter to update the value.
         fakeRl.line = "test input";
@@ -47,7 +47,8 @@ describe("advancedInputPrompt", () => {
   it("returns the default when no input is provided", async () => {
     // Spy on useKeypress to simulate only Enter being pressed with no update.
     const keypressSpy = jest
-      .spyOn(require("@inquirer/core"), "useKeypress")
+      .spyOn(inquirerCore, "useKeypress")
+      // eslint-disable-next-line  @typescript-eslint/no-explicit-any
       .mockImplementation((cb: any) => {
         fakeRl.line = "";
         cb({ name: "enter" }, fakeRl);

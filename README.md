@@ -9,67 +9,31 @@ This is work in progress - I'm using it to improve the user experience of [Termi
 ## Installation
 
 ```sh
-npm install inquirer-interactive-list-prompt
+npm install @dwmkerr/advanced-input-prompt
 ```
+
+## Features
+
+The `hint` parameter shows a hint below the input prompt. As soon as the user starts typing, the hint is hidden:
+
+
 
 ## Usage
 
 ```js
-import prompt from 'inquirer-interactive-list-prompt';
+import prompt from "./advanced-input-prompt";
+
+async function demo() {
+  const answer = await prompt({
+    message: "Enter your input (required):",
+    hint: "<Enter> Show Menu",
+    required: true,
+    validate: (input: string) => input.trim() !== "" || "Input cannot be empty",
+  });
+  console.log(`User input: ${answer1}`);
+}
 
 (async () => {
-  const answer = await prompt({
-    message: 'Select an option:',
-    choices: [
-      { name: 'Run', value: 'run', key: 'r' },
-      { name: 'Quit', value: 'quit', key: 'q' },
-    ],
-    renderSelected: choice => `❯ ${choice.name} (${choice.key})`, // optional
-    renderUnselected: choice => `  ${choice.name} (${choice.key})`, // optional
-  });
-
-  console.log(`Selected option: ${answer}`);
+  await demo();
 })();
 ```
-
-## API
-
-### `prompt(options)`
-
-Prompts the user with an interactive list prompt.
-
-#### `options`
-
-Type: `object`
-
-##### `message`
-
-Type: `string`
-Required: `true`
-
-The message to display to the user.
-
-##### `choices`
-
-Type: `Array<{ name: string, value: any }>`
-Required: `true`
-
-An array of choices to display to the user.
-
-##### `renderer`
-
-Type: `(line: string, index: number) => string`
-Default: `(line) => line`
-
-A function that is called to render each choice in the prompt. The function should return a string that will be displayed to the user.
-
-##### `hideCursor`
-
-Type: `boolean`
-Default: `true`
-
-Whether to hide the cursor while the prompt is active.
-
-## License
-
-MIT
