@@ -1,6 +1,6 @@
 # inquirer-advanced-input-prompt
 
-[![cicd](https://github.com/dwmkerr/inquirer-advanced-input-prompt/actions/workflows/cicd.yaml/badge.svg)](https://github.com/dwmkerr/inquirer-advanced-input-prompt/actions/workflows/cicd.yaml) ![npm (scoped)](https://img.shields.io/npm/v/%40dwmkerr/inquirer-advanced-input-prompt) [![codecov](https://codecov.io/gh/dwmkerr/inquirer-advanced-input-prompt/graph/badge.svg?token=ZOJY0STS3S)](https://codecov.io/gh/dwmkerr/inquirer-advanced-input-prompt)
+[![cicd](https://github.com/dwmkerr/inquirer-advanced-input-prompt/actions/workflows/cicd.yaml/badge.svg)](https://github.com/dwmkerr/inquirer-advanced-input-prompt/actions/workflows/cicd.yaml) ![npm (scoped)](https://img.shields.io/npm/v/%40dwmkerr/inquirer-advanced-input-prompt) [![codecov](https://codecov.io/gh/dwmkerr/inquirer-advanced-input-prompt/graph/badge.svg?token=oHFSLfOHGd)](https://codecov.io/gh/dwmkerr/inquirer-advanced-input-prompt)
 
 An input prompt implementation for [Inquirer](https://github.com/SBoudrias/Inquirer.js/) that provides some advanced features.
 
