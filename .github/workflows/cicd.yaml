@@ -50,7 +50,7 @@ jobs:
           npm install ..
 
           # Validate we have the index.
-          if [ -f "../node_modules/<your-package-name>/dist/index.js" ]; then
+          if [ -f "../node_modules/@dwmkerr/inquirer-advanced-input-prompt/dist/index.js" ]; then
             echo "index.js is installed successfully."
           else
             echo "index.js is missing!"
