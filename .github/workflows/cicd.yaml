@@ -84,7 +84,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: @dwmkerr/advanced-input-prompt
+          package-name: "@dwmkerr/advanced-input-prompt"
 
       - name: Checkout
         uses: actions/checkout@v4

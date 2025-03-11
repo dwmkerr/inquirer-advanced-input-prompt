@@ -16,8 +16,6 @@ npm install @dwmkerr/advanced-input-prompt
 
 The `hint` parameter shows a hint below the input prompt. As soon as the user starts typing, the hint is hidden:
 
-
-
 ## Usage
 
 ```js
@@ -37,3 +35,15 @@ async function demo() {
   await demo();
 })();
 ```
+
+## Developer Guide
+
+Clone the repo, install dependencies and use `npm start` to run the demo:
+
+```bash
+git clone git@github.com:dwmkerr/inquirer-advanced-input-prompt
+cd inquirer-advanced-input-prompt
+npm install
+npm start
+```
+
