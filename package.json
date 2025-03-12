@@ -1,7 +1,7 @@
 {
-  "name": "@dwmkerr/inquirer-advanced-input-prompt",
+  "name": "@dwmkerr/inquirer-prompts",
   "version": "0.1.0",
-  "description": "An Inquirer.js input prompt that offers 'hints' displayed below the input field, useful for providing instructions to users.",
+  "description": "Additional prompts for Inquirer that provide advanced features.",
   "author": "dwmkerr",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
