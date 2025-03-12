@@ -1,6 +1,6 @@
 {
   "name": "@dwmkerr/inquirer-prompts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Additional prompts for Inquirer that provide advanced features.",
   "author": "dwmkerr",
   "main": "dist/index.js",
